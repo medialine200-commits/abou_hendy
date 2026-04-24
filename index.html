@@ -849,6 +849,54 @@
       .brand{font-size:18px}
       .brand img{width:50px;height:50px}
     }
+  
+    /* ===== Final mobile fix for maintenance videos ===== */
+    .maintenance-video-card,
+    .maintenance-video-card video {
+      min-width: 0;
+    }
+
+    .maintenance-video-card video {
+      width: 100%;
+      height: auto;
+      min-height: 260px;
+      display: block;
+      background: #000;
+    }
+
+    @media (max-width: 640px) {
+      .maintenance-layout {
+        display: block;
+      }
+
+      .maintenance-panel {
+        position: relative;
+        top: auto;
+        margin-bottom: 22px;
+      }
+
+      .maintenance-videos {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+      }
+
+      .maintenance-video-card {
+        width: 100%;
+        display: block;
+      }
+
+      .maintenance-video-card video {
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+        max-height: none;
+        object-fit: contain;
+        background: #000;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1106,7 +1154,7 @@
           <div class="maintenance-videos">
 
           <article class="maintenance-video-card">
-            <video controls preload="metadata" playsinline>
+            <video controls preload="metadata" playsinline poster="shop-inside.jpg">
               <source src="maintenance-01.mp4" type="video/mp4">
               المتصفح الخاص بك لا يدعم تشغيل الفيديو.
             </video>
@@ -1114,7 +1162,7 @@
             <p>لقطات حقيقية من داخل مركز الصيانة وتجهيزات العمل.</p>
           </article>
           <article class="maintenance-video-card">
-            <video controls preload="metadata" playsinline>
+            <video controls preload="metadata" playsinline poster="shop-front.jpg">
               <source src="maintenance-02.mp4" type="video/mp4">
               المتصفح الخاص بك لا يدعم تشغيل الفيديو.
             </video>
